@@ -1,0 +1,113 @@
+.hero-section {
+  background: radial-gradient(circle at center, #152638 0%, #09131e 100%);
+  padding: 40px 20px 50px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 2px solid rgba(200, 160, 93, 0.3);
+}
+
+.hero-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 380px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50% / 40%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(216, 178, 110, 0.3);
+  transition: transform 0.4s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.02);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 38px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  background: linear-gradient(180deg, #fcebc3 0%, #d2a865 60%, #9e7939 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.hero-subtitle {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 3px;
+  background: linear-gradient(180deg, #f7e6c0 0%, #caa259 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+}
+
+.hero-cta-button {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #1e1305;
+  padding: 14px 40px;
+  border-radius: 50px;
+  background: linear-gradient(180deg, #e3c47e 0%, #b8914d 100%);
+  border: 2px solid #f2da9f;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.hero-cta-button:hover {
+  background: linear-gradient(180deg, #ebd08d 0%, #c49a55 100%);
+  box-shadow: 0 6px 20px rgba(216, 178, 110, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.hero-cta-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .hero-content {
+    order: -1;
+  }
+  
+  .hero-image-wrapper {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}

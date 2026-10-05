@@ -1,0 +1,174 @@
+.contacts-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 104px 24px 64px;
+  color: #f3f4f6;
+  background-color: #0b0a0a;
+  background-image: url('../../assets/RestorantFon.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.contacts-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(11, 10, 10, 0.74), rgba(11, 10, 10, 0.93)),
+    linear-gradient(to top, rgba(0, 0, 0, 0.42), transparent 52%);
+}
+
+.contacts-content {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 900px);
+  margin: 32px auto 0;
+}
+
+.contacts-back-button {
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 0;
+  color: #a7a3a0;
+  background: transparent;
+  font-size: 12px;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.contacts-back-button span {
+  color: var(--color-gold-light);
+  font-size: 20px;
+  line-height: 0;
+}
+
+.contacts-page[dir='rtl'] .contacts-back-button {
+  direction: ltr;
+}
+
+.contacts-back-button:hover { color: var(--color-gold-light); }
+
+.contacts-heading {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.contacts-eyebrow {
+  margin-bottom: 13px;
+  color: var(--color-gold-light);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.contacts-heading h1 {
+  color: #ffffff;
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 5vw, 48px);
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+.contacts-heading p:last-child {
+  margin-top: 9px;
+  color: #a8a5a3;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.contacts-message {
+  color: #b7b3b0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.contacts-city-group {
+  margin-bottom: 36px;
+}
+
+.contacts-city-title {
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+  color: var(--color-gold-light);
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.contacts-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.contacts-card {
+  display: grid;
+  gap: 10px;
+  padding: 22px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 16px;
+  background: rgba(24, 22, 22, 0.82);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.48);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.contacts-card-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 10px;
+}
+
+.contacts-card-row dt {
+  color: #d0cdca;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.contacts-card-row dd {
+  color: #ffffff;
+  font-size: 13px;
+  text-align: right;
+}
+
+.contacts-page[dir='rtl'] .contacts-card-row dd {
+  text-align: left;
+}
+
+@media (max-width: 620px) {
+  .contacts-page {
+    padding: 88px 16px 36px;
+  }
+
+  .contacts-back-button {
+    top: 20px;
+    left: 18px;
+  }
+
+  .contacts-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .contacts-card-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contacts-card-row dd {
+    text-align: left;
+  }
+
+  .contacts-page[dir='rtl'] .contacts-card-row dd {
+    text-align: right;
+  }
+}

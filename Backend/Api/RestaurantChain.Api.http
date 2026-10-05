@@ -1,0 +1,38 @@
+@RestaurantChain.Api_HostAddress = http://localhost:5007
+
+@lang=en
+GET {{RestaurantChain.Api_HostAddress}}/api/restaurants?languageCode={{lang}}
+
+
+###
+
+@reservationId=10
+GET {{RestaurantChain.Api_HostAddress}}/api/reservations/{{reservationId}}
+
+###
+
+@restaurantId=1
+@requiredCapacity=3
+GET {{RestaurantChain.Api_HostAddress}}/api/reservations/available-tables?restaurantId={{restaurantId}}&requiredCapacity={{requiredCapacity}}
+
+###
+
+
+
+POST {{RestaurantChain.Api_HostAddress}}/api/reservations/reserve
+Content-Type: application/json
+
+{
+  //CreateReservationRequest
+}
+
+###
+
+
+GET {{RestaurantChain.Api_HostAddress}}/api/menu/categories?restaurantId={{restaurantId}}&languageCode=ru
+
+###
+@categoryId=5
+GET {{RestaurantChain.Api_HostAddress}}/api/menu/menuItems?restaurantId={{restaurantId}}&categoryId={{categoryId}}&languageCode=ru
+
+###

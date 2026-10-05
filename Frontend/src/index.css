@@ -1,0 +1,71 @@
+:root {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Montserrat', system-ui, -apple-system, sans-serif;
+  
+  --color-navy-dark: #09131e;
+  --color-navy: #0f1d2c;
+  --color-navy-light: #182b3d;
+  
+  --color-gold-light: #e2c17c;
+  --color-gold: #c6a05d;
+  --color-gold-dark: #9e7b3b;
+  --color-gold-gradient: linear-gradient(180deg, #d3ae68 0%, #aa8443 100%);
+  --color-gold-bar-gradient: linear-gradient(180deg, #ca9f5a 0%, #b38842 100%);
+  
+  --color-wood-dark: #2a1a12;
+  --color-wood-medium: #3a261c;
+  
+  --color-text-light: #f5f0e6;
+  --color-text-gold: #d8b26e;
+  --color-text-dark: #111e2b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #0b1118;
+  background-image: url('./assets/RestorantFon.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: var(--color-text-light);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Page wrapper container matching screenshot background blur feel */
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 1450px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+  background-color: #ffffff;
+}
+
+/* Buttons reset & styling */
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.25s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

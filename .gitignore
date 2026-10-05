@@ -1,0 +1,39 @@
+# .NET build output
+**/bin/
+**/obj/
+**/TestResults/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Node.js and Vite
+Frontend/node_modules/
+Frontend/dist/
+Frontend/.vite/
+Frontend/coverage/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Local environment and development settings
+.env
+.env.*
+!.env.example
+**/appsettings.Development.json
+**/appsettings.Local.json
+
+# Local database files and backups
+*.mdf
+*.ldf
+*.bak
+DataBase/Backups/
+
+# Logs and operating system files
+*.log
+.DS_Store
+Thumbs.db
+Desktop.ini

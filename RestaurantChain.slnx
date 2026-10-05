@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Backend/" />
+  <Folder Name="/Backend/Api/">
+    <Project Path="Backend/Api/RestaurantChain.Api.csproj" />
+  </Folder>
+  <Folder Name="/Backend/Application/">
+    <Project Path="Backend/Application/RestaurantChain.Application.csproj" />
+  </Folder>
+  <Folder Name="/Backend/Infrastructure/">
+    <Project Path="Backend/Infrastructure/RestaurantChain.Infrastructure.csproj" />
+  </Folder>
+</Solution>
